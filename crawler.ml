@@ -16,7 +16,7 @@ let body url =
   Printf.printf "Body of length: %d\n" (String.length body);
   body;;
 
-let rec head list = 
+let head list = 
   match list with
   | h::_ -> body h
   | _ -> body "https://reddit.com/";;
