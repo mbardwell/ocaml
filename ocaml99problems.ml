@@ -5,8 +5,11 @@ let rec last = function
   | [t] -> Some t
   | _::t -> last t
 
-let int_of_int_option = function
+(* From https://discuss.ocaml.org/t/how-does-one-print-any-type/4362/2 - usually the dev includes a print formatter*)
+let last_pp ppf number = 
+  let int_of_int_option = function
   | None -> 0
-  | Some n -> n
+  | Some n -> n in
+  Format.fprintf ppf "%d" @@ int_of_int_option number
 
-let () = Printf.printf "%d\n" @@ int_of_int_option @@ last [1;2;3]
+let () = Format.printf "Printing last %a\n" last_pp @@ last [1;2;3]
