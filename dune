@@ -1,4 +1,8 @@
 (executable
   (name crawler)
-  (libraries core lwt re cohttp cohttp-lwt-unix)
-)
+  (modules crawler)
+  (libraries core lwt re cohttp cohttp-lwt-unix))
+
+(executable
+  (name ocaml99problems)
+  (modules ocaml99problems))
