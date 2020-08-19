@@ -6,3 +6,7 @@
 (executable
   (name ocaml99problems)
   (modules ocaml99problems))
+
+(executable
+  (name typing)
+  (modules typing))
