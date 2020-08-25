@@ -1,0 +1,9 @@
+; (executable
+;   (name bmodule)
+;   (modules amodule bmodule)
+;   (libraries lwt cohttp-lwt-unix))
+
+(executable
+  (name amodule)
+  (modules amodule)
+  (libraries lwt cohttp-lwt-unix))
